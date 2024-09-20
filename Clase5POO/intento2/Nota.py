@@ -1,35 +1,39 @@
 
 
 class Nota:
-    def __init__(self, cursada, notasAlumnos, alumnosList):
-        self.__cursada = cursada
-        self.__notasAlumnos = notasAlumnos
-        self.__alumnosList = alumnosList
+    def __init__(self, materia, alumno, calificacion):
+        self.__materia = materia
+        self.__alumno = alumno
+        self.__calificacion = calificacion
 
 
     def getNombre(self):
-        return self.__cursada 
+        return self.__materia 
     
-    def setNombre(self,cursada):
-        self.__cursada = cursada
+    def setNombre(self,materia):
+        self.__materia = materia
 
-    def getNotasAlumnos(self):
-        return self.__notasAlumnos 
+    def getAlumno(self):
+        return self.__alumno 
     
-    def setNotasAlumnos(self,notasAlumnos):
-        self.__notasAlumnos = notasAlumnos
+    def setAlumno(self,alumno):
+        self.__alumno = alumno
 
-    def getAlumnosList(self):
-        return self.__alumnosList 
+    def getCalificacion(self):
+        return self.__calificacion 
     
-    def setAlumnosList(self,alumnosList):
-        self.__alumnosList = alumnosList
+    def setCalificacion(self,calificacion):
+        self.__calificacion = calificacion
+
+    
+    def __str__(self):
+        return f"\nMateria: {self.__materia.getNombre()}, Alumno: {self.__alumno.getNombre()}, Calificación: {self.__calificacion}\n"
 
 
 
-    cursada = property(getNombre, setNombre)
-    notasAlumnos = property(getNotasAlumnos, setNotasAlumnos)
-    alumnosList = property(getAlumnosList, setAlumnosList)
+    materia = property(getNombre, setNombre)
+    alumno = property(getAlumno, setAlumno)
+    calificacion = property(getCalificacion, setCalificacion)
 
         
 
