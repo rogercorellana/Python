@@ -12,7 +12,14 @@ class Maestro(Persona):
     def setMateriasList(self,materiasList):
         self.__materiasList = materiasList
 
-
+    def crearNota(self, Alumno, Materia, nota):
+            nota1 = Nota(
+                materia= Materia,
+                alumno= Alumno,
+                calificacion= nota
+            )
+            Materia.notasAlumnos.append(nota1)
+            Alumno.notasList.append(nota1)
 
     def calificarAlumno(self, Alumno, Materia, nota):
 
@@ -23,18 +30,18 @@ class Maestro(Persona):
             print("el maestro no da clases en la materia")
 
 
-        def crearNota(self, Alumno, Materia, nota):
-            nota1 = Nota(
-                materia= Materia,
-                alumno= Alumno,
-                calificacion= nota
-            )
-            Materia.notasAlumnos.append(nota1)
-            Alumno.notasList.append(nota1)
+        # def crearNota(self, Alumno, Materia, nota):
+        #     nota1 = Nota(  
+        #         materia= Materia,
+        #         alumno= Alumno,
+        #         calificacion= nota
+        #     )
+        #     Materia.notasAlumnos.append(nota1)
+        #     Alumno.notasList.append(nota1)
         
-        crearNota(self, Alumno, Materia, nota)
+        self.crearNota(self, Alumno, Materia, nota)
         print("Calificacion subida exitosamente")
-        
+        x
 
     def __str__(self):
         materias__str = ""
