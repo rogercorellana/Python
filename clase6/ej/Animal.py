@@ -9,9 +9,12 @@ class Animal(ABC):
     
     def setPosicion(self,posicion):
         self.__posicion = posicion
+        
 
     #es necesario? o solo uso gys es lo mismo?
     #nombre = property(getPosicion, setPosicion)
+    def __str__(self):
+        return f"Animal en la posición {self.getPosicion()}"
 
     @abstractmethod
     def mover():
@@ -20,3 +23,5 @@ class Animal(ABC):
     @abstractmethod
     def interractuar():
         pass
+
+  
