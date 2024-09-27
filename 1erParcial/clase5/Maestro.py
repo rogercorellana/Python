@@ -13,9 +13,9 @@ y poder imprimir por pantalla nombre apellido de maestros y alumnos junto con su
 from Persona import * 
 
 class Maestro(Persona):
-    def __init__(self, nombre,cursadaAsignada):
+    def __init__(self, nombre,cursada):
         super().__init__(nombre)
-        self.cursadaAsignada = cursadaAsignada
+        self.cursada = cursada
 
     def calificar(self, alumno, nota):
         return "califique"
@@ -28,7 +28,7 @@ class Maestro(Persona):
 
 
     def __str__(self):
-        return super().__str__() + f", cursada asignada: {self.cursadaAsignada}"
+        return super().__str__() 
     
 
 

@@ -13,10 +13,25 @@ y poder imprimir por pantalla nombre apellido de maestros y alumnos junto con su
 from Persona import *
 
 class Alumno(Persona):
-    def __init__(self, nombre):
+    def __init__(self, nombre, cursadaList):
         super().__init__(nombre)
+        self.cursadaList = cursadaList
 
-    def verNotas(materia):
-        pass
+    def verCursadas(self):
+        diccionario = {}
+        
+        for i in self.cursadaList:
+            #capturo nombre materia
+            materia = i.nombre
+            # si el nombre del alumno esta en cursada.calificacionesAlumnos
+            if self.nombre in i.calificacionesAlumnos:
+                nota = i.calificacionesAlumnos[self.nombre]
+                #agrego
+                diccionario[materia] = nota
+        return diccionario    
+
+
+    def __str__(self):
+        return self.nombre 
 
     

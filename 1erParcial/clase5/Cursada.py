@@ -9,12 +9,20 @@ cuales son sus alumnos
 del alumno cuales son sus materias y notas 
 y poder imprimir por pantalla nombre apellido de maestros y alumnos junto con su clase //si es un maestro o alumno'''
 
-from abc import *
-
-class Persona(ABC):
-    def __init__(self,nombre):
+class Cursada:
+    def __init__(self, nombre, maestroAsignado, alumnosList, calificacionesAlumnos):
         self.nombre = nombre
-    
+        self.maestroAsignado = maestroAsignado
+        self.alumnosList = alumnosList
+        self.calificacionesAlumnos = calificacionesAlumnos
+
     def __str__(self):
-        return f"{self.nombre}"
+
+        alumnos2 = ""
+        for i in self.alumnosList:
+            alumnos2 = alumnos2 + str(i) + " "
+
+        
+
+        return f"Materia: {self.nombre}, MaestroAsignado: {self.maestroAsignado}, Alumnos:{alumnos2} "
     

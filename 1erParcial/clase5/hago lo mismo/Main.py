@@ -9,12 +9,3 @@ cuales son sus alumnos
 del alumno cuales son sus materias y notas 
 y poder imprimir por pantalla nombre apellido de maestros y alumnos junto con su clase //si es un maestro o alumno'''
 
-from abc import *
-
-class Persona(ABC):
-    def __init__(self,nombre):
-        self.nombre = nombre
-    
-    def __str__(self):
-        return f"{self.nombre}"
-    
