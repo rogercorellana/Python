@@ -5,19 +5,38 @@ class Biblioteca:
     def __init__(self,librosList):
         self.librosList = librosList
 
-    def obtenerNombre(self):
-        return 
+    def obtenerNombres(self):
+        arraynombre = []
+        for i in self.librosList:
+            arraynombre.append(i.nombre)
 
-    def ordenarLibros(self):
-        self.librosList.sort(key=self.obtenerNombre)
+        return arraynombre
+    
+
+    def ordenarLibrosPorNombre(self):
+        array = self.obtenerNombres()
+        array.sort()
+        return array
+            
+
 
         
     
     def obtenerLibroMasViejo(self):
-        pass
+        libroMasViejo = self.librosList[0]
+        
+        for i in self.librosList:
+            if i.añoPublicacion < libroMasViejo.añoPublicacion:
+                libroMasViejo = i 
+
+        return libroMasViejo
+            
+
+
 
     def __str__(self):
         libros = ""
         for i in self.librosList:
             libros = libros + str(i)
         return libros
+    

@@ -13,5 +13,11 @@ biblioteca1 = Biblioteca([libro1,libro2,libro3])
 print(libro1)
 print(biblioteca1)
 
+print(biblioteca1.obtenerNombres())
+
+print(biblioteca1.ordenarLibrosPorNombre())
+
+print(biblioteca1.obtenerLibroMasViejo())
+
 
 

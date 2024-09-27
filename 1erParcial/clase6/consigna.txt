@@ -1,0 +1,13 @@
+
+
+Desarrollar un sistema q simule distintos animales q interacctuen entre si y cada animal tiene 
+una posicion una grilla(array)
+y la capacidad de moverse 
+
+dentro de los animales se encuentran el perro el gato la vaca
+los cuales al momento de moverse deveran evaluar no estar a mas de dos casillas del lugar para interractuar
+ con los animales a su alrededor
+
+ se pueden mover, interractuan con otro pero como maximo a dos casillas interractuar(Animal hace miauu si se encuentra)
+
+ 
